@@ -1,0 +1,28 @@
+module CanCan
+  class Ability
+    objects
+  end
+end
+
+
+class Ability 
+  include CanCan::Ability 
+end
+
+Exmp: 2
+
+
+module A
+  objects
+end
+
+class B
+  include A
+end
+
+
+
+
+Role name :admin, user_id 2 
+User :mohan , 2
+User Loklesh , 3

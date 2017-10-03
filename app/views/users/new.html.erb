@@ -1,0 +1,146 @@
+<%= form_for @user do |f|%>
+<% if @user.errors.any? %>
+  <% @user.errors.messages.each do |key,msg |%>
+    <ul>
+    <li><%= "#{key} : " + msg.first%></li>
+    </ul>
+  <%end%>
+<%end%>
+<!DOCTYPE html>
+<html>
+<style>
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #4c4c4c;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Set a style for all buttons */
+.testbox {
+  margin: 20px auto;
+  width: 343px; 
+  height: 464px; 
+  
+  border-radius: 8px/7px; 
+  background-color: ; 
+   
+  border: solid 1px #cbc9c9;
+}
+
+form{
+  margin: 0 30px;
+}
+
+
+
+
+
+
+.container {
+    padding: 16px;
+}
+
+html{
+  background-color: #ffffff;
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  padding: 6px 25px 0px 20px;
+  margin: 10px 8px 20px 0px;
+  display: inline-block;
+  float: left;
+  text-decoration: none;
+  
+  border-radius: 5px; 
+  background-color:green; 
+  top: 0px;
+  position: relative;
+}
+
+.icon {
+  display: inline-block;
+ width: 200px; 
+  height: 39px; 
+  
+  padding: 8px 0px 8px 15px;
+  margin-left: 15px;
+  border-radius: 4px 0px 0px 4px;
+     border: 1px solid #ccc;
+    box-sizing: border-box;
+  border: solid 0px #cbc9c9;
+}
+
+p {
+  font-size: 16px;
+  width: 150px;
+  display: inline-block;
+  margin-left: 18px;
+}
+
+.gender{
+ margin-left: 30px;
+  margin-bottom: 30px;
+}
+.radio{
+width: 50px; 
+  height: 20px; 
+
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+   
+}
+</style>
+<h1>Registration</h1>
+ <p>Already have an Account?<p>
+      
+      <%= link_to"Login", sign_in_users_path %>
+
+<form action="/">
+<div class="testbox">
+  <div class="icon">
+  <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname">
+      <label><b>Email</b></label>
+      <input type="email" placeholder="Enter email" name="psw">
+
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw">
+      <label><b> Confirm Password</b></label>
+      <input type="password" placeholder="retype Password" name="psw">
+      <label>Mobile</label>
+      <input type="text" placeholder="Mobile Number" name="psw">
+      <div class="accounttype">
+      <div class="gender">
+<input type="radio" name="gender" value="male" class="radio" checked> Male<br>
+  <input type="radio" name="gender" value="female" class="radio"> Female
+  </div>
+</div>
+
+       <button type="submit" class="button">Submit</button>
+    </div>
+    </div>
+ <%end%>
+
+ <form>
+ <div class="clearfix">
+      
+    
+   
+   
+     
+
+    </div>
+  </div>
+  </form>
+  
